@@ -20,8 +20,18 @@ const store = configureStore({
 const startingState = store.getState();
 console.log(startingState);
 
-store.dispatch({ type: "song/addSong", payload: "New Song!!" });
+store.dispatch({
+  type: "song/addSong",
+  payload: "New Song!!",
+});
+
+store.dispatch({
+  type: "song/addSong",
+  payload: "Old Song!!",
+});
 
 const finalState = store.getState();
 console.log(finalState);
 
+
+export default store

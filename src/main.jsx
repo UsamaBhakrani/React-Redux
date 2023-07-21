@@ -1,11 +1,14 @@
-import "./store/main";
+import store from "./store/main";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "bulma/css/bulma.css";
+import { Provider } from "react-redux";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>
 );
