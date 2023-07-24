@@ -32,26 +32,14 @@ const store = configureStore({
 const startingState = store.getState();
 console.log(startingState);
 
-store.dispatch({
-  type: "song/addSong",
-  payload: "New Song!!",
-});
-
-store.dispatch({
-  type: "song/addSong",
-  payload: "Old Song!!",
-});
-
-store.dispatch({
-  type: "movie/addMovie",
-  payload: "Redemption",
-});
-store.dispatch({
-  type: "movie/addMovie",
-  payload: "Batman",
-});
+store.dispatch(songsSlice.actions.addSong("New Song"));
+store.dispatch(songsSlice.actions.addSong("Old Song"));
+store.dispatch(moviesSlice.actions.addMovie("Batman"));
+store.dispatch(moviesSlice.actions.addMovie("Redemption"));
 
 const finalState = store.getState();
 console.log(finalState);
+
+console.log(songsSlice);
 
 export default store;
