@@ -40,6 +40,6 @@ store.dispatch(moviesSlice.actions.addMovie("Redemption"));
 const finalState = store.getState();
 console.log(finalState);
 
-console.log(songsSlice);
+export { store };
 
-export default store;
+console.log(songsSlice.actions.addSong());

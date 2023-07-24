@@ -6,8 +6,7 @@ function SongPlaylist() {
   const songPlaylist = [];
 
   const handleSongAdd = (song) => {
-    // To Do:
-    // Add song to list of songs
+    console.log(song)
   };
   const handleSongRemove = (song) => {
     // To Do:
