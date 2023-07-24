@@ -2,12 +2,15 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const songsSlice = createSlice({
   name: "song",
-  initialState: [],
+  initialState: ["shakira"],
   reducers: {
     addSong(state, action) {
       state.push(action.payload);
     },
-    removeSong(state, action) {},
+    removeSong(state, action) {
+      const index = state.indexOf(action.payload);
+      state.splice(index, 1);
+    },
   },
 });
 
@@ -29,17 +32,8 @@ const store = configureStore({
   },
 });
 
-const startingState = store.getState();
-console.log(startingState);
-
 store.dispatch(songsSlice.actions.addSong("New Song"));
-store.dispatch(songsSlice.actions.addSong("Old Song"));
 store.dispatch(moviesSlice.actions.addMovie("Batman"));
-store.dispatch(moviesSlice.actions.addMovie("Redemption"));
-
-const finalState = store.getState();
-console.log(finalState);
 
 export { store };
-
-console.log(songsSlice.actions.addSong());
+export const { addSong, initialState, removeSong } = songsSlice.actions;
