@@ -1,5 +1,3 @@
-import { Provider } from "react-redux";
-import { store } from "./store/main";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "bulma/css/bulma.css";
