@@ -2,7 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const songsSlice = createSlice({
   name: "song",
-  initialState: [],
+  initialState: ["bommga"],
   reducers: {
     addSong(state, action) {
       state.push(action.payload);
@@ -27,6 +27,15 @@ const store = configureStore({
   },
 });
 
-console.log(moviesSlice);
-console.log(songsSlice);
-console.log(store);
+console.log(songsSlice.actions)
+
+// const startingState = store.getState();
+// console.log(startingState);
+
+// store.dispatch({
+//   type: "song/addSong",
+//   payload: "New Song",
+// });
+
+// const finalState = store.getState();
+// console.log(finalState);
