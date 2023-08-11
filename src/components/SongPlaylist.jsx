@@ -1,4 +1,5 @@
 import { createRandomSong } from "../data";
+import { useDispatch } from "react-redux";
 
 function SongPlaylist() {
   // To Do:
@@ -8,7 +9,9 @@ function SongPlaylist() {
   const handleSongAdd = (song) => {
     // To Do:
     // Add song to list of songs
+    console.log(song);
   };
+
   const handleSongRemove = (song) => {
     // To Do:
     // Remove song from list of songs

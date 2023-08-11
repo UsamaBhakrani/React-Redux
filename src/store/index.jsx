@@ -27,15 +27,21 @@ const store = configureStore({
   },
 });
 
-console.log(songsSlice.actions)
+
+console.log(songsSlice.actions.addSong());
 
 // const startingState = store.getState();
 // console.log(startingState);
 
-// store.dispatch({
-//   type: "song/addSong",
-//   payload: "New Song",
-// });
+store.dispatch(songsSlice.actions.addSong("latest song"));
 
-// const finalState = store.getState();
-// console.log(finalState);
+// store.dispatch({
+    //   type: "song/addSong",
+    //   payload: "New Song",
+    // });
+    
+    // const finalState = store.getState();
+    // console.log(finalState);
+    
+    export { store };
+    export const {addSong} = songsSlice.actions
