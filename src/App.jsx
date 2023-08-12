@@ -9,7 +9,6 @@ export default function App() {
 
   const handleResetClick = () => {
     dispatch(resetMovie());
-    dispatch(resetSong());
   };
 
   return (

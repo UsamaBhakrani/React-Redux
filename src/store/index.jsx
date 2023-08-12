@@ -11,9 +11,9 @@ const songsSlice = createSlice({
       const index = state.indexOf(action.payload);
       state.splice(index, 1);
     },
-    resetSong(state, action) {
-      return [];
-    },
+  },
+  extraReducers(builder) {
+    builder.addCase("movie/resetMovie", (state, action) => []);
   },
 });
 
