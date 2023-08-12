@@ -13,7 +13,7 @@ const songsSlice = createSlice({
     },
   },
   extraReducers(builder) {
-    builder.addCase("movie/resetMovie", (state, action) => []);
+    builder.addCase("movie/reset", (state, action) => []);
   },
 });
 
@@ -28,7 +28,7 @@ const moviesSlice = createSlice({
       const index = state.indexOf(action.payload);
       state.splice(index, 1);
     },
-    resetMovie(state, action) {
+    reset(state, action) {
       return [];
     },
   },
@@ -57,5 +57,5 @@ store.dispatch(songsSlice.actions.addSong("latest song"));
 // console.log(finalState);
 
 export { store };
-export const { addSong, removeSong, resetSong } = songsSlice.actions;
-export const { addMovie, removeMovie, resetMovie } = moviesSlice.actions;
+export const { addSong, removeSong } = songsSlice.actions;
+export const { addMovie, removeMovie, reset } = moviesSlice.actions;
