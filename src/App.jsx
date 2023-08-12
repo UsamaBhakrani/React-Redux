@@ -9,6 +9,7 @@ export default function App() {
 
   const handleResetClick = () => {
     dispatch(reset());
+
   };
 
   return (
